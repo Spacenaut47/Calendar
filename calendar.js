@@ -1,6 +1,6 @@
 const date = new Date()
 const renderCalendar = () =>{
-        date.setDate(1)
+    date.setDate(1)
     const monthDays = document.querySelector('.days')
     const lastDay = new Date(date.getFullYear(),date.getMonth()+1,0).getDate()
     const prevLastDay = new Date(date.getFullYear(),date.getMonth(),0).getDate()
@@ -23,7 +23,7 @@ const renderCalendar = () =>{
     ]
 
     document.querySelector('.date h1').innerHTML = month[date.getMonth()]
-    document.querySelector('.date p').innerHTML = date.toDateString()
+    document.querySelector('.date p').innerHTML = new Date().toDateString()
 
     let days = ""
 
