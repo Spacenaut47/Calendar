@@ -1,5 +1,6 @@
 const date = new Date()
-date.setDate(1)
+const renderCalendar = () =>{
+    date.setDate(1)
 const monthDays = document.querySelector('.days')
 const lastDay = new Date(date.getFullYear(),date.getMonth()+1,0).getDate()
 const prevLastDay = new Date(date.getFullYear(),date.getMonth(),0).getDate()
@@ -42,3 +43,19 @@ for(let j = 1;j < nextDays;j++){
     days += `<div class = "next-date">${j}</div>`
     monthDays.innerHTML = days
 }
+    
+}
+
+
+document.querySelector('.prev').
+addEventListener('click',()=> {
+    date.setMonth(date.getMonth()-1)
+    renderCalendar()
+})
+
+document.querySelector('.next').
+addEventListener('click',()=> {
+    date.setMonth(date.getMonth()+1)
+    renderCalendar()
+})
+renderCalendar()
